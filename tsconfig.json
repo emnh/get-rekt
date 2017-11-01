@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "amd",
+    "lib": ["dom", "es2015.promise", "es5"],
+    "strict": true,
+    "typeRoots": ["node_modules/@types"],
+    "moduleResolution": "node"
+  },
+  "files": [
+    "main.ts"
+  ],
+  "types": {
+    "gl-matrix": "gl-matrix/index.d.ts"
+  }
+}

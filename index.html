@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head><title>GetRekt : Planes of War</title>
+      <link rel="stylesheet" type="text/css" href="node_modules/codemirror/lib/codemirror.css">
+      <style>
+        /* remove the border */
+        body {
+          border: 0;
+          background-color: white;
+        }
+        /*canvas {
+          width: 1200px;
+          height: 675px;
+          display: block;
+        }*/
+        .texture {
+          display: none;
+        }
+      </style>
+      <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    </head>
+    <body>
+      <img id="spritesheet" class="texture" src="terrain_atlas.png"></img>
+      <img id="spritesheet2" class="texture" src="obj_misk_atlas.png"></img>
+      <div id="buildings">
+        <img id="baseTexture" class="texture" src="tribalhero_graphics/TOWNCENTER_STRUCTURE.png"></img>
+        <img id="templeTexture" class="texture" src="tribalhero_graphics/TEMPLE_STRUCTURE.png"></img>
+        <img id="barrackTexture" class="texture" src="tribalhero_graphics/BARRACK_STRUCTURE.png"></img>
+        <img id="baseTexture2" class="texture" src="color0_Castle_Huge_face0_0.png"></img>
+      </div>
+      <div id="pixiContainer">
+      </div>
+      <pre id="debug"></pre>
+      <script type="text/javascript" src="node_modules/requirejs/require.js"></script>
+      <script type="text/javascript">
+        // hack needed to load pixi.js
+        requirejs.jsExtRegExp = /^\/|:|\?$/;
+        requirejs.config({
+            paths: {
+                "stats": "./node_modules/stats.js/build/stats.min",
+                "pixi.js": './node_modules/pixi.js/dist/pixi',
+                "gl-matrix": './node_modules/gl-matrix/dist/gl-matrix',
+                "glsl": "lib/glsl"
+            },
+            packages: [{
+              name: "codemirror",
+              location: "./node_modules/codemirror",
+              main: "lib/codemirror"
+            }]
+        });
+        requirejs(["stats"], function(stats) {
+          window.Stats = stats;
+          requirejs(["main"], function(main) {
+            console.log("done loading main");
+          });
+          // });
+        });
+      </script>
+      <!-- <script src="main.js"></script> -->
+    </body>
+</html>

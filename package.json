@@ -1,0 +1,30 @@
+{
+  "name": "tsweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/codemirror": "0.0.47",
+    "@types/gl-matrix": "^2.3.0",
+    "@types/pixi.js": "^4.5.4",
+    "@types/requirejs": "^2.1.31",
+    "@types/stats": "^0.16.30",
+    "@types/webgl2": "0.0.2",
+    "awesome-typescript-loader": "^3.2.3",
+    "codemirror": "^5.30.0",
+    "gl-matrix": "^2.3.0",
+    "pixi.js": "^4.5.6",
+    "requirejs": "^2.3.5",
+    "stats.js": "^0.17.0",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.3"
+  },
+  "devDependencies": {}
+}
